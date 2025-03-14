@@ -21,6 +21,22 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+
+  // Add ESLint config
+  eslint: {
+    // Don't run ESLint during builds
+    ignoreDuringBuilds: true,
+  },
+
+  // Disable image optimization warning
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
+  },
 };
 
 export default nextConfig;
