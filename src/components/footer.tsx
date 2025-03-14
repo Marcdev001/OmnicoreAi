@@ -30,7 +30,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/tools"
+                  href="/dashboard"
                   className="text-sm text-foreground/70 hover:text-[#30D5C8] transition-colors"
                 >
                   Data Analysis
