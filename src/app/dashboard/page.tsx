@@ -64,6 +64,31 @@ export default function ToolsPage() {
     }
   }, [])
 
+  const handleExport = () => {
+    try {
+      // Create a formatted string of the analysis results
+      const exportData = analysisResults.map(result => ({
+        fileName: result.fileName,
+        insights: result.insights,
+        patterns: result.patterns,
+        predictions: result.predictions
+      }));
+
+      // Create and download file
+      const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'analysis-results.json';
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    } catch (error) {
+      console.error('Export failed:', error);
+    }
+  };
+
   if (loading) {
     return <div>Loading...</div>
   }
@@ -92,7 +117,11 @@ export default function ToolsPage() {
             <div className="space-y-8">
               <div className="flex items-center justify-between">
                 <h2 className="text-xl font-semibold">Analysis Results</h2>
-                <Button variant="outline" size="sm">
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  onClick={handleExport}
+                >
                   <Download className="h-4 w-4 mr-2" />
                   Export Analysis
                 </Button>

@@ -102,29 +102,6 @@ export default function AboutPage() {
         </section>
 
         {/* Team Section */}
-        <section className="py-16">
-          <h2 className="text-3xl font-bold text-[#30D5C8] mb-12">Technology Stack</h2>
-          <div className="bg-black/30 border border-[#30D5C8]/20 rounded-xl p-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-[#30D5C8] mb-2">Gemini 2.0</div>
-                <p className="text-white/70">Advanced AI Model</p>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-[#30D5C8] mb-2">Next.js</div>
-                <p className="text-white/70">Frontend Framework</p>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-[#30D5C8] mb-2">TypeScript</div>
-                <p className="text-white/70">Development Language</p>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-[#30D5C8] mb-2">TailwindCSS</div>
-                <p className="text-white/70">Styling Framework</p>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
     </div>
   );

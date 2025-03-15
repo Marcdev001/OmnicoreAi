@@ -21,7 +21,7 @@ export function DataVisualization({ data }: DataVisualizationProps) {
   return (
     <Card className="p-6 bg-black/30 border-[#30D5C8]/20">
       <Tabs defaultValue="timeSeries" className="w-full">
-        <TabsList className="grid grid-cols-3 w-full mb-6">
+        <TabsList className="grid w-full mb-6 grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-0">
           <TabsTrigger value="timeSeries">Time Series</TabsTrigger>
           <TabsTrigger value="distribution">Distribution</TabsTrigger>
           <TabsTrigger value="correlation">Correlation</TabsTrigger>
