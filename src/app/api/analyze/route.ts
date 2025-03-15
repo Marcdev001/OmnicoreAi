@@ -315,7 +315,4 @@ interface VisualizationData {
   }>;
 }
 
-// Export helper functions for reuse
-export {
-  processTimeSeriesData
-}
+// Function is defined locally, no need to import
